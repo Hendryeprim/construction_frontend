@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://construction-backend-ka8c.onrender.com/api';
 
 console.log("=== API CONFIGURATION ===");
 console.log("VITE_API_BASE_URL env var:", import.meta.env.VITE_API_BASE_URL);
