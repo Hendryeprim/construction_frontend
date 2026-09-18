@@ -13,19 +13,15 @@ const pageVariants = {
 function Interior() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     const loadProjects = async () => {
       try {
-        setLoading(true);
-        setError(null);
         const data = await fetchProjects('interior');
         setProjects(data);
-      } catch (err) {
-        console.error("Failed to load interior projects", err);
-        setError(err.message || "Failed to connect to backend API");
+      } catch (error) {
+        console.error("Failed to load interior projects", error);
       } finally {
         setLoading(false);
       }
@@ -70,14 +66,8 @@ function Interior() {
       <main className="px-8 md:px-24 py-16">
         {loading ? (
           <div className="flex justify-center items-center h-64 text-accent tracking-widest">LOADING PROJECTS...</div>
-        ) : error ? (
-          <div className="flex flex-col gap-4 text-red-500 tracking-widest border border-red-500/20 p-8 rounded-lg bg-red-500/5 max-w-2xl">
-            <h3 className="font-bold text-lg">API CONNECTION ERROR</h3>
-            <p className="text-concrete">Details: {error}</p>
-            <p className="text-xs text-concrete">Check browser console to see if it's a CORS issue, connection refused, or invalid URL.</p>
-          </div>
         ) : projects.length === 0 ? (
-          <div className="text-concrete tracking-widest">NO PROJECTS FOUND. DATABASE IS EMPTY.</div>
+          <div className="text-concrete tracking-widest">NO PROJECTS FOUND. PLEASE ADD PROJECTS VIA THE CMS.</div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {projects.map((project, index) => {
