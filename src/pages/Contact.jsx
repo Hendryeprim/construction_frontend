@@ -53,23 +53,23 @@ function Contact() {
           <div className="space-y-6 text-concrete">
             <div>
               <strong className="block text-secondary text-lg mb-1">Phone</strong>
-              <p>[add phone number]</p>
+              <p>+91 98944 47071</p>
             </div>
             <div>
               <strong className="block text-secondary text-lg mb-1">WhatsApp</strong>
-              <p>[add WhatsApp number]</p>
+              <p>+91 98944 47071</p>
             </div>
             <div>
               <strong className="block text-secondary text-lg mb-1">Email</strong>
-              <p>[add email]</p>
+              <p>contact@cjvinfra.com</p>
             </div>
             <div>
               <strong className="block text-secondary text-lg mb-1">Office Address</strong>
-              <p>[add address]</p>
+              <p>No.1/1069, Perumal Kovil Street, Nanmangalam, Chennai-600129</p>
             </div>
             <div>
               <strong className="block text-secondary text-lg mb-1">Location</strong>
-              <a href="[add map link]" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-secondary">View on Google Maps</a>
+              <a href="https://maps.app.goo.gl/3Pp5ZGDxaUsHfR3S8" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-secondary">View on Google Maps</a>
             </div>
           </div>
           <div className="mt-12 p-8 bg-gray-50 border border-gray-200 text-center">

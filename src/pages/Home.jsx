@@ -17,10 +17,8 @@ function Home() {
             transition={{ duration: 1, delay: 0.2 }}
             className="flex flex-col items-center"
           >
-            {/* We force white text because of the dark image background */}
-            <h1 className="text-3xl md:text-5xl font-bold tracking-[0.1em] uppercase text-white drop-shadow-lg">
-              CJV Infra & Realty
-            </h1>
+            {/* Logo instead of text */}
+            <img src="/cjv_logo.png" alt="CJV Infra & Realty" className="h-16 md:h-20 object-contain drop-shadow-lg" />
           </motion.div>
           <motion.p 
             initial={{ opacity: 0 }}
