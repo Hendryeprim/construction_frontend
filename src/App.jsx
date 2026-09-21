@@ -3,8 +3,9 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Home from './pages/Home';
-import Interior from './pages/Interior';
-import Construction from './pages/Construction';
+import Infra from './pages/Infra';
+import Realty from './pages/Realty';
+import Contact from './pages/Contact';
 import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
@@ -14,10 +15,10 @@ function App() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route path="/interior" element={<Interior />} />
-        <Route path="/construction" element={<Construction />} />
-        <Route path="/interior/project/:id" element={<ProjectDetail type="interior" />} />
-        <Route path="/construction/project/:id" element={<ProjectDetail type="construction" />} />
+        <Route path="/infra" element={<Infra />} />
+        <Route path="/realty" element={<Realty />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/project/:id" element={<ProjectDetail />} />
       </Routes>
     </AnimatePresence>
   );
