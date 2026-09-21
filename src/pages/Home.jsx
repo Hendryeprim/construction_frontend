@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../AuthContext';
 
 function Home() {
   const navigate = useNavigate();
+  const { user, logout } = useContext(AuthContext);
 
   return (
     <div className="min-h-screen bg-primary overflow-hidden flex flex-col relative font-sans">
       
       {/* Header/Logo Overlay */}
-      <header className="absolute top-0 w-full z-50 px-8 py-8 flex justify-center items-center pointer-events-none">
+      <header className="absolute top-0 w-full z-50 px-8 py-8 flex justify-between items-start pointer-events-none">
+        <div className="w-24"></div> {/* Spacer for balance */}
         <div className="text-center">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
@@ -28,6 +31,39 @@ function Home() {
           >
             BUILDING DREAMS. SECURING LAND.
           </motion.p>
+        </div>
+        <div className="w-24 flex justify-end pointer-events-auto flex-col gap-2">
+          {user ? (
+            <div className="flex flex-col gap-2 items-end">
+              <span className="text-xs font-bold tracking-widest text-white/80 bg-black/30 px-3 py-1 rounded-full">
+                HI, {user.username.toUpperCase()}
+              </span>
+              <button 
+                onClick={() => logout()}
+                className="text-xs font-bold tracking-widest text-secondary bg-white/90 px-4 py-2 rounded-full hover:bg-white transition-colors shadow-lg"
+              >
+                LOGOUT
+              </button>
+              {/* Only show link to Django Admin for superusers/staff */}
+              {user.is_staff && (
+                <a 
+                  href="http://127.0.0.1:8000/admin/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[10px] font-bold tracking-widest text-white underline mt-1"
+                >
+                  Open Admin Panel
+                </a>
+              )}
+            </div>
+          ) : (
+            <button 
+              onClick={() => navigate('/login')}
+              className="text-xs font-bold tracking-widest text-secondary bg-white/90 px-4 py-2 rounded-full hover:bg-white transition-colors shadow-lg"
+            >
+              LOGIN
+            </button>
+          )}
         </div>
       </header>
 

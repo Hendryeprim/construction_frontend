@@ -91,6 +91,50 @@ function Realty() {
           </div>
         )}
       </main>
+
+      {/* Trust Section */}
+      <section className="py-20 bg-primary border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-8 text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-bold text-secondary mb-6"
+          >
+            Verified Properties. Trusted Guidance. End-to-End Support.
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-concrete text-sm md:text-base leading-relaxed max-w-2xl mx-auto"
+          >
+            From identifying the right property to document verification, negotiation, registration and after-sales support, our team helps you through every step.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-secondary text-primary text-center px-8 border-t border-gray-200">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Looking for the Right Property?</h2>
+          <p className="text-gray-300 text-sm md:text-base mb-10 max-w-xl mx-auto">
+            Tell us your requirement and our team will help you explore suitable property options.
+          </p>
+          <button 
+            onClick={() => navigate('/contact')}
+            className="bg-accent text-white px-10 py-4 font-bold tracking-widest text-sm hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl"
+          >
+            ENQUIRE ABOUT PROPERTIES
+          </button>
+        </motion.div>
+      </section>
     </motion.div>
   );
 }

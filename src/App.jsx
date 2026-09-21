@@ -11,6 +11,8 @@ import Realty from './pages/Realty';
 import Contact from './pages/Contact';
 import ProjectDetail from './pages/ProjectDetail';
 import About from './pages/About';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   const location = useLocation();
@@ -28,6 +30,8 @@ function App() {
           <Route path="/realty" element={<Realty />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </AnimatePresence>
 
