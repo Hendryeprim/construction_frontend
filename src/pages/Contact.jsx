@@ -100,8 +100,21 @@ function Contact() {
               <p>No.1/1069, Perumal Kovil Street, Nanmangalam, Chennai-600129</p>
             </div>
             <div>
-              <strong className="block text-secondary text-lg mb-1">Location</strong>
-              <a href="https://maps.app.goo.gl/3Pp5ZGDxaUsHfR3S8" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-secondary">View on Google Maps</a>
+              <strong className="block text-secondary text-lg mb-3">Location Map</strong>
+              <div className="w-full h-64 bg-gray-200 border border-gray-200 mb-2">
+                <iframe 
+                  src="https://maps.google.com/maps?q=No.1/1069,%20Perumal%20Kovil%20Street,%20Nanmangalam,%20Chennai-600129&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy"
+                  title="CJV Office Location"
+                ></iframe>
+              </div>
+              <a href="https://maps.app.goo.gl/3Pp5ZGDxaUsHfR3S8" target="_blank" rel="noopener noreferrer" className="text-accent underline hover:text-secondary text-sm font-semibold tracking-widest">
+                OPEN IN GOOGLE MAPS
+              </a>
             </div>
           </div>
           <div className="mt-12 p-8 bg-gray-50 border border-gray-200 text-center">
