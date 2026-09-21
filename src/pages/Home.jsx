@@ -43,7 +43,7 @@ function Home() {
             className="absolute inset-0 bg-cover bg-center transition-transform duration-[2s] group-hover:scale-105"
             style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80')" }}
           ></div>
-          <div className="absolute inset-0 bg-secondary/80 group-hover:bg-secondary/60 transition-colors duration-700"></div>
+          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-700"></div>
 
           <div className="absolute inset-0 flex flex-col items-center justify-center p-8 z-10 text-white">
             <motion.h2 
@@ -78,7 +78,7 @@ function Home() {
             className="absolute inset-0 bg-cover bg-center transition-transform duration-[2s] group-hover:scale-105"
             style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80')" }}
           ></div>
-          <div className="absolute inset-0 bg-secondary/80 group-hover:bg-secondary/60 transition-colors duration-700"></div>
+          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-700"></div>
 
           <div className="absolute inset-0 flex flex-col items-center justify-center p-8 z-10 text-white">
             <motion.h2 
