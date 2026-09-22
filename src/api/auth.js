@@ -1,5 +1,7 @@
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+
 export const loginUser = async (username, password) => {
-  const response = await fetch('http://127.0.0.1:8000/api/auth/login/', {
+  const response = await fetch(`${API_BASE_URL}/auth/login/`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
@@ -11,7 +13,7 @@ export const loginUser = async (username, password) => {
 };
 
 export const registerUser = async (username, email, password) => {
-  const response = await fetch('http://127.0.0.1:8000/api/auth/register/', {
+  const response = await fetch(`${API_BASE_URL}/auth/register/`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, email, password }),
@@ -25,7 +27,7 @@ export const registerUser = async (username, email, password) => {
 };
 
 export const getUser = async (token) => {
-  const response = await fetch('http://127.0.0.1:8000/api/auth/me/', {
+  const response = await fetch(`${API_BASE_URL}/auth/me/`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
