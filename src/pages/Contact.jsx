@@ -31,7 +31,7 @@ function Contact() {
     e.preventDefault();
     setStatus('submitting');
     try {
-      await axios.post('http://localhost:8000/api/enquiries/', formData);
+      await axios.post('https://api.cjvinfrarealty.com/api/enquiries/', formData);
       setStatus('success');
       setFormData({ name: '', phone: '', email: '', interest: '', message: '' });
     } catch (error) {

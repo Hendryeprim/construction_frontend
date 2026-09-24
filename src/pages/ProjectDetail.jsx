@@ -116,6 +116,26 @@ function ProjectDetail() {
               <p className="text-concrete whitespace-pre-wrap">{project.materials_used}</p>
             </div>
           )}
+          
+          {/* Action Buttons */}
+          <div className="pt-6 border-t border-gray-200 flex flex-col gap-4">
+            <a 
+              href={`https://wa.me/919894447071?text=${encodeURIComponent(`Hi, I would like to order the project: ${project.title}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-accent text-white py-3 text-center font-bold tracking-widest uppercase hover:bg-secondary transition-colors"
+            >
+              Order Now
+            </a>
+            <a 
+              href={`https://wa.me/919894447071?text=${encodeURIComponent(`Hi, I have an inquiry about the project: ${project.title}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-transparent border-2 border-accent text-accent py-3 text-center font-bold tracking-widest uppercase hover:bg-accent hover:text-white transition-colors"
+            >
+              Enquire
+            </a>
+          </div>
         </div>
       </div>
 

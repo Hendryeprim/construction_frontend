@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.cjvinfrarealty.com/api';
 
 export const loginUser = async (username, password) => {
   const response = await fetch(`${API_BASE_URL}/auth/login/`, {

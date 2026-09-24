@@ -23,7 +23,7 @@ function Login() {
       login(data.access, data.refresh, userData);
       
       if (userData.is_staff) {
-        window.location.href = 'http://127.0.0.1:8000/admin/';
+        window.location.href = 'https://api.cjvinfrarealty.com/admin/';
       } else {
         navigate('/');
       }

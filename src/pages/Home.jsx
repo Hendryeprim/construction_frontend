@@ -47,7 +47,7 @@ function Home() {
               {/* Only show link to Django Admin for superusers/staff */}
               {user.is_staff && (
                 <a 
-                  href="http://127.0.0.1:8000/admin/"
+                  href="https://api.cjvinfrarealty.com/admin/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-[10px] font-bold tracking-widest text-white underline mt-1"

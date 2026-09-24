@@ -32,7 +32,7 @@ export const getProjectImage = (project) => {
   
   if (cmsImage) {
     if (cmsImage.startsWith('/')) {
-      cmsImage = `http://localhost:8000${cmsImage}`;
+      cmsImage = `https://api.cjvinfrarealty.com${cmsImage}`;
     }
     return cmsImage;
   }
