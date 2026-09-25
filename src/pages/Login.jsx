@@ -23,7 +23,9 @@ function Login() {
       login(data.access, data.refresh, userData);
       
       if (userData.is_staff) {
-        window.location.href = 'https://api.cjvinfrarealty.com/admin/';
+        const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.cjvinfrarealty.com/api';
+        const ADMIN_URL = API_BASE_URL.replace('/api', '/admin/');
+        window.location.href = ADMIN_URL;
       } else {
         navigate('/');
       }
